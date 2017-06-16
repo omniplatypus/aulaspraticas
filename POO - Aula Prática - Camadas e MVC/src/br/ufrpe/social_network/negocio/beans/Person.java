@@ -76,7 +76,8 @@ public class Person {
     
     @Override
     public String toString() {
-        // TODO Implementar método toString da classe Person
-        return "Coloque sua implementação aqui";
+        //  Implementar método toString da classe Person
+    	String str = this.getName();
+        return str;
     }
 }

@@ -1,5 +1,7 @@
 package br.ufrpe.social_network.negocio;
 
+import javax.swing.RepaintManager;
+
 import br.ufrpe.social_network.dao.PersonDAO;
 import br.ufrpe.social_network.negocio.beans.Person;
 
@@ -20,19 +22,22 @@ public class PersonController {
     }
     
     public void savePerson(Person p) {
-        // TODO Método que salva pessoa no repositório
+        //  Método que salva pessoa no repositório
+    	personsRepository.createPerson(p);
     }
     
     public Person find(long personId) {
-        // TODO Retorna o objeto do tipo Person que contenha aquele ID
-        return null;
+        //  Retorna o objeto do tipo Person que contenha aquele ID
+        return personsRepository.findPerson(personId);
     }
     
     public void update(Person newPerson) {
-        //TODO Encontra no repositório obj que tenha id igual a newPerson.id e atualiza objeto 
+        // Encontra no repositório obj que tenha id igual a newPerson.id e atualiza objeto 
+    	personsRepository.updatePerson(newPerson);
     }
     
     public void delete(Person p) {
-        // TODO apaga do repositório objeto que contenha o id igual a p.id 
+        //  apaga do repositório objeto que contenha o id igual a p.id 
+    	personsRepository.deletePerson(p.getId());
     }
 }

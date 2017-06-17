@@ -6,7 +6,7 @@ import br.ufrpe.social_network.negocio.beans.Person;
 public class PersonDAO {
     // implementar singleton para esta classe - PersonDAO
 
-	public static PersonDAO instance;
+	private static PersonDAO instance;
 	
 	private static ArrayList<Person> persons = new ArrayList<>();
 	
